@@ -1,10 +1,13 @@
+// +build hello_world_main
+
+
 /**
 - A package consists of one or more .go source files in a single directory
 that define what the package does.
 - Each source file begins with a package declaration, here package main,
 that states which package the file belongs to;
 - A list of the imported packages follows
-- Then the declarat ions of the program
+- Then the declarations of the program
 - Package main is special. It defines a standalone executable program, not a library
 - Within the package main, the function main is also special:
   it’s where execution of the program begins

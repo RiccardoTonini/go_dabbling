@@ -1,9 +1,11 @@
-// Prints command-line arguments.
+// +build echo_main
+
 package main
 
 import (
 	"fmt"
 	"os"
+	"strconv"
 )
 
 func main() {
@@ -14,11 +16,11 @@ func main() {
 	appropriate types based on the initializer values
 	/**
 	i++ These are statements, not expressions as they are in most languages in
-	the C family, so j=i++ is illegal, and they are postfix only,
-	so --i is not legal either
+	the C family, so j=i++ is illegal, and they are postfix only, so --i is not legal either
 	**/
-	for i := 1; i < len(os.Args); i++ {
+	for i := 1; i < len(os.Args); i++ {  //  os.Args is a slice of strings //
 		s += sep + os.Args[i]
+		fmt.Println("index " + strconv.Itoa(i) + " os.Args[i] " + os.Args[i])
 		sep = " "
 	}
 	fmt.Println(s)

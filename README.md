@@ -1,1 +1,1 @@
-# Go dabbling
+# Go lang exploring
