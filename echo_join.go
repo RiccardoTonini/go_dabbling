@@ -6,8 +6,16 @@ import (
 	"fmt";
 	"os";
 	"strings";
+	"github.com/riccardotonini/time_monitoring";
 )
 
+func echo (args []string) {
+	p := fmt.Println
+	p(strings.Join(args, " "))
+}
+
 func main() {
-         fmt.Println(strings.Join(os.Args[1:], " "))
+    p := fmt.Println
+    timed_echo := time_monitoring.Timed(echo)
+    timed_echo(echo, os.Args[1:])
 }
