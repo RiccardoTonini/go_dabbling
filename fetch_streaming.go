@@ -23,7 +23,7 @@ func normalize_url (url string)  string {
 	return strings.Join(url_bits, "")
 }
 
-func check(err interface{}, extra string) {
+func check(err *error, extra string) {
 
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error. %v\t (%s) \n", err, extra)
